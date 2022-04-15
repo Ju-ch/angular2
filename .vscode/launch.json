@@ -2,20 +2,33 @@
     "configurations": [
         {
             "type": "vscode-edge-devtools.debug",
+            "name": "Launch Microsoft Edge",
             "request": "launch",
-            "name": "Launch Edge DevTools",
-            "url": "http://localhost:4200",
-            "webRoot": "${workspaceFolder}"
+            "runtimeArgs": [
+                "--remote-debugging-port=9222"
+            ],
+            "url": "http://localhost:4200",// Provide your project's url to finish configuring
+            "presentation": {
+                "hidden": true
+            }
         },
         {
             "type": "vscode-edge-devtools.debug",
             "name": "Open Edge DevTools",
             "request": "attach",
-            "url": "http://localhost:4200",
+            "url": "http://localhost:4200",// Provide your project's url to finish configuring
             "presentation": {
                 "hidden": true
-            },
-            "webRoot": "${workspaceFolder}"
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch Edge and attach DevTools",
+            "configurations": [
+                "Launch Microsoft Edge",
+                "Open Edge DevTools"
+            ]
         }
     ]
 }
