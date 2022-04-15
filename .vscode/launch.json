@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "vscode-edge-devtools.debug",
+            "request": "launch",
+            "name": "Launch Edge DevTools",
+            "url": "http://localhost:4200",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "vscode-edge-devtools.debug",
+            "name": "Open Edge DevTools",
+            "request": "attach",
+            "url": "http://localhost:4200",
+            "presentation": {
+                "hidden": true
+            },
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
